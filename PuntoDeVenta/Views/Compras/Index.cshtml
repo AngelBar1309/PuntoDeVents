@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PuntoDeVenta.Models.Compras>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.productos.nombreProducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proveedores.nombreProveedora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.productos.nombreProducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proveedores.nombreProveedora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.compraID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.compraID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.compraID })
+        </td>
+    </tr>
+}
+
+</table>

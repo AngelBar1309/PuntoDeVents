@@ -20,6 +20,11 @@ namespace PuntoDeVenta.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Proveedores> proveedores { get; set; }
+        public DbSet<Compras> Compras { get; set; }
+        public DbSet<Productos> productos { get; set; }
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
