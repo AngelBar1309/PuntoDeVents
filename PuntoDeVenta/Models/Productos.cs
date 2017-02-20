@@ -18,5 +18,7 @@ namespace PuntoDeVenta.Models
         public string categoria { get; set; }
 
         public virtual ICollection<Compras> compras { get; set; }
+
+        public virtual ICollection<VentaProductos> ventaProductos { get; set; }
     }
 }

@@ -10,7 +10,6 @@ namespace PuntoDeVenta.Models
     {
         [Key]
         public string proveedorRfc { get; set; }
-
         public string nombreProveedora { get; set; }
         public string domicilio { get; set; }
         public string telefono { get; set; }
